@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<style>
+    #vote-buttons {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .vote-button {
+        transform: scale(8);
+        color: coral;
+
+        margin: 15vmin 5vmin 0 5vmin;
+    }
+    #downvote {
+        color: cyan;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= voteObject.question%>></title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Josefin+Sans&family=Work+Sans:wght@500&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/57704d7de0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1 id="title"><%= voteObject.question%></h1>
+<hr class="separator">
+<h2 id="description">Number Of Votes: <%= voteObject.votes%></h2>
+<section id="vote-buttons">
+    <a class="vote-button" id="upvote" href="/vote/add?id=<%=voteObject.id%>"><i class="fas fa-angle-up"></i></a>
+    <a class="vote-button" id="downvote" href="/vote/subtract?id=<%=voteObject.id%>"><i class="fas fa-angle-down"></i></a>
+</section>
+</body>
+</html>

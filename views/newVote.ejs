@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<style>
+    #new-vote-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    #new-vote-form * {
+        margin: 15vmin 5vmin 5vmin 0;
+    }
+
+    #text-box, #submit-button {
+        font-size: 5vmin;
+        font-family: sans-serif;
+        background: rgba(255,255,255,0);
+        padding: 3vmin;
+        color: white;
+        border: 2px solid cyan;
+        border-radius: 50px;
+    }
+    #text-box:focus {
+        outline: none;
+
+
+    }
+    #submit-button {
+        font-family: Work Sans;
+        color: white;
+
+        transition: transform 250ms 50ms ease-in-out;
+    }
+    #submit-button:hover {
+        transform: scale(0.9);
+    }
+</style>
+<html>
+<head>
+    <title>Create A New Poll</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Josefin+Sans&family=Work+Sans:wght@500&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<h1 id="title">Create A New Poll</h1>
+<hr class="separator">
+<form action="/votes/add" id="new-vote-form">
+    <input id="text-box" type="text" name="question" required placeholder="Enter your statement here">
+    <button id="submit-button" type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background: rgb(44, 44, 44);
+  color: white;
+}
+
+#title {
+  font-size: 12vmin;
+  font-family: Verdana;
+  text-align: center;
+}
+
+.separator {
+  border: 1px solid white;
+}
+
+#description {
+  font-size: 5vmin;
+  font-family: 'Secular One';
+  text-align: center;
+}

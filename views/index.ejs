@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<style>
+  #links {
+    display: flex;
+    margin: 10vmin auto auto auto;
+    width: 100%;
+
+    justify-content: space-evenly;
+    align-content: space-evenly;
+  }
+
+  @media (max-aspect-ratio: 3/4) {
+    #links {
+      flex-direction: column;
+      height: 50vh;
+    }
+  }
+
+  .link {
+    font-size: 5vmin;
+    font-family: Work Sans;
+    text-align: center;
+    margin: auto;
+
+    color: white;
+    text-decoration: none;
+
+    border: 2px solid cyan;
+    border-radius: 50px;
+
+    padding: 4vmin;
+    width: 45vmin;
+
+    transition: transform 250ms 50ms ease-in-out;
+  }
+  .link:hover {
+    transform: scale(1.1);
+  }
+</style>
+<html>
+<head>
+  <title>Kaju Voting App</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&family=Secular+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <h1 id="title">Kaju Voting App</h1>
+  <p id="description">Welcome to Kaju Voting App</p>
+  <hr class="separator">
+  <section id="links">
+    <a href="/votes" class="link">View Polls</a>
+    <a href="/votes/new" class="link">Create New Poll</a>
+  </section>
+
+</body>
+</html>

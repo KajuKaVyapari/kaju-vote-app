@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<style>
+#polls-list {
+    margin: 15vmin auto 15vmin auto;
+
+    display: flex;
+    align-content: space-evenly;
+    width: 40%;
+    height: max-content;
+
+    flex-direction: column;
+}
+
+.poll-a {
+    display: flex;
+    margin: 5vmin;
+
+    color: white;
+    text-decoration: none;
+}
+
+.poll-question {
+    margin-right: 2vmin;
+
+
+    font-size: 4vmin;
+    font-family: Secular One;
+}
+
+.poll-votes {
+    font-size: 5vmin;
+    margin-left: auto;
+    font-family: Roboto Slab;
+}
+
+.cyan {
+    border: 1px solid cyan;
+}
+
+.line {
+    width: 100%;
+}
+</style>
+<html>
+<head>
+    <title>Polls</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Josefin+Sans&family=Work+Sans:wght@500&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<h1 id="title">Polls</h1>
+<hr class="separator">
+<section id="polls-list" class="cyan">
+    <% for (let i in votes) {%>
+    <a href="/vote/<%= votes[i]._id%>" class="poll-a" onclick="window">
+        <span class="poll-question"><%= votes[i].question%></span>
+        <span class="poll-votes"><%= votes[i].votes%></span>
+    </a>
+    <%if (i < votes.length - 1) {%>
+    <hr class="cyan line">
+    <%}%>
+    <%}%>
+</section>
+</body>
+</html>
